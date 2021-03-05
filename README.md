@@ -1,8 +1,8 @@
-# A Step-by-Step Guide to Connecting the Local VS Studio Code to Google Colab's GPU Runtime
+# A Step-by-Step Guide to Connecting the Local Visual Studio Code to Google Colab's GPU Runtime
 
 ## Requirements
 - A Google account of course (yeah I know Google sucks).
-- VS Studio Code installed on your operating system.
+- Visual Studio Code installed on your operating system.
 
 ## Steps
 ### Step 1
@@ -13,7 +13,7 @@ Once `cloudflared` is installed, you will have a `binary(.exe)` file after extra
 > Note the double backslash `C:\\cloudflared.exe`, one backslash would not do it!
 
 ### Step 3
-Next, open VS Studio Code and install the `Remote-SSH` extension. After installing, press `Ctrl + Shift + P` and search for `Remote Configuration File`. Then, hit enter and paste the following lines in the configuration file:
+Next, open Visual Studio Code and install the `Remote-SSH` extension. After installing, press `Ctrl + Shift + P` and search for `Remote Configuration File`. Then, hit enter and paste the following lines in the configuration file:
 ```
 Host *.trycloudflare.com
  HostName %h
@@ -45,14 +45,14 @@ while True: pass
 ```
 
 ### Step 5
-Copy the appearing ``VSCode Remote SSH`` hostname. Go back to your VS Studio Code and again hit `Ctrl + Shift + P` and search for `Remote:Connect to Host`.
+Copy the appearing ``VSCode Remote SSH`` hostname. Go back to your Visual Studio Code and again hit `Ctrl + Shift + P` and search for `Remote:Connect to Host`.
 
-Paste the VS Studio Code's hostname and press enter. Select Linux as the platform and hit enter. It will ask for the password you have set previously and voilà you are now connected to Google Colab with GPU access all bundled in your VS Studio Code!
+Paste the Visual Studio Code's hostname and press enter. Select Linux as the platform and hit enter. It will ask for the password you have set previously and voilà you are now connected to Google Colab with GPU access all bundled in your Visual Studio Code!
 
 You can check if you have GPU access by opening a new terminal and hitting the `nvidia-smi` command.
 
 ### Step 6
-You can open any folder in your Google drive. Just copy the path of the folder and paste it into VS Studio Code. Keep the Google Colab tab open in the browser.
+You can open any folder in your Google drive. Just copy the path of the folder and paste it into Visual Studio Code. Keep the Google Colab tab open in the browser.
 
 ### Note
 It may take some time for connecting to the Google Colab via SSH. Also, you must run python files by using `python3 <filename>` in the terminal to ensure your files run in `Python-3.x`. If you use only `python <filename>` the Google Colab would use `Python-2` at the backend.
